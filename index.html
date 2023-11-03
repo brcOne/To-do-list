@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BP-5</title>
+  <link rel="stylesheet" href="./index.css" />
+</head>
+
+<body>
+  <h2>To do List</h2>
+  
+  <div class="login-container">
+    <!-- <h3>Things to do</h3> -->
+    
+  
+    <div class="Things-to-do">
+     
+      <div class="form">
+        <input id="title" placeholder="Title">
+        <input id="descr" type="text" placeholder="Description">
+        <input id="s-date" type="text" placeholder="Start date" onfocus="(this.type='date')" >
+        <input id="e-date" type="text" placeholder="End date" onfocus="(this.type='date')"  ><br><br>
+        <input type="checkbox" id="customCheckbox" class="styled-checkbox">
+        <label for="customCheckbox" class="checkbox-label">Priority</label>
+          
+    </div>
+
+      <div class="inputs">
+        
+
+
+        <div class="buttons">
+          <button class="btn-add" id="add-btn">
+            <i class="fa-solid fa-plus" style="color: #ffffff;"></i>
+          </button>
+          <button class="btn-refresh" id="refresh-btn">
+            <i class="fa-solid fa-rotate-right" style="color: #ffffff;"></i>
+          </button>
+          
+          
+        </div>
+        <div class="error-div">
+          <h6 id="errorD"></h6>
+        </div>
+      </div>
+    </div>
+   
+
+    <div id="containerTask" class="tasks-conatiner">
+      
+
+
+    </div>
+ 
+    <script src="https://kit.fontawesome.com/6e2f9a7b88.js" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+    
+
+</body>
+
+</html>

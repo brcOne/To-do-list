@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: poppins;
+}
+
+body {
+  background-image: url(./img/back.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 80vh;
+}
+h2 {
+  font-size: 24px;
+  color: #ffffff;
+}
+.login-container h3 {
+  margin-top: 30px;
+  margin-left: 18px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #000000;
+}
+.login-container {
+  display: flex;
+  color: white;
+  width: 50%;
+  height: 420px;
+  border-radius: 20px;
+  position: relative;
+}
+
+@keyframes borderAnimation {
+  0%,
+  100% {
+    box-shadow: -4px -4px 8px rgba(255, 255, 255, 0.9),
+      4px 4px 8px rgba(0, 0, 0, 0.9);
+  }
+  50% {
+    box-shadow: -4px -4px 8px rgba(0, 0, 0, 0.3),
+      4px 4px 8px rgba(255, 255, 255, 0.9);
+  }
+}
+
+.Things-to-do {
+  background: rgba(255, 255, 255, 0.01);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.9px);
+  -webkit-backdrop-filter: blur(2.9px);
+
+  border-radius: 10px;
+  width: 200px;
+  height: 360px;
+  margin: 30px;
+  border-radius: 20px;
+  animation: borderAnimation 4s linear infinite;
+}
+.form {
+  position: relative;
+  margin-top: 20px;
+}
+input {
+  color: #f5f5f5;
+  height: 28px;
+  margin: 8px;
+  border: none;
+  background: transparent;
+  border-bottom: 1px white solid;
+  border-radius: 4px;
+  outline: none;
+}
+
+#descr {
+  height: 50px;
+}
+.buttons {
+  display: flex;
+  margin: 8px;
+  gap: 10px;
+}
+.btn-add {
+  width: 33px;
+  height: 31px;
+  background-color: #000000;
+  border: none;
+  border-radius: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.6;
+  cursor: pointer;
+  pointer-events: none;
+}
+.btn-refresh {
+  width: 33px;
+  height: 31px;
+  background-color: #000000;
+  border: none;
+  border-radius: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 1;
+  pointer-events: all;
+}
+.btn-add.active {
+  opacity: 1;
+  pointer-events: all;
+}
+.icons-button i {
+  font-size: 20px;
+}
+.tasks-conatiner {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.01);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.9px);
+  -webkit-backdrop-filter: blur(2.9px);
+  border-radius: 20px;
+  width: 480px;
+  height: 365px;
+  margin: 30px;
+  animation: borderAnimation 4s linear infinite;
+}
+.tasks-btns {
+  display: flex;
+  justify-content: space-around;
+  transition: opacity 0.8s ease;
+}
+.tasks-btns.changeOpacity {
+  opacity: 50%;
+  pointer-events: none;
+}
+.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.task {
+  color: #000;
+  margin-left: 20px;
+  margin-top: 20px;
+  background-color: #f5f5f5;
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+}
+.task p {
+  font-size: 8px;
+  margin-left: 10px;
+  font-weight: bold;
+  color: #047295;
+}
+
+.removeB,
+.editB,
+.validB {
+  margin-top: 30px;
+  margin-left: 10px;
+  width: 33px;
+  height: 31px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.styled-checkbox {
+  display: none;
+}
+.checkbox-label {
+  line-height: 20px;
+}
+
+.styled-checkbox + .checkbox-label:before {
+  margin-left: 10px;
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ffffff;
+  border-radius: 4px;
+  margin-right: 10px;
+
+  cursor: pointer;
+  text-align: center;
+  line-height: 20px;
+}
+
+.styled-checkbox:checked + .checkbox-label:before {
+  content: "✔";
+}
+
+.checkbox-label {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.styled-checkbox:checked + .checkbox-label {
+  color: #fce834;
+}
+.dateError {
+  animation: hideAfter4s 12s forwards;
+  text-align: center;
+  font-size: 9px;
+  color: #ff196c;
+}
+@keyframes hideAfter4s {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
